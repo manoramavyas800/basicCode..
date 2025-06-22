@@ -51,3 +51,25 @@ public class TestClass {
         System.out.println(AP(n,a,r));
     }
 }
+//FIND LCM.
+
+import java.util.Scanner;
+
+    public class Lcm {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+           int m = sc.nextInt();
+           int lcm=1;
+           for (int i = Math.max(n,m); i <= n*m; i++) {
+               if (i%n == 0&& i%m == 0) {
+                   lcm=i;
+                   break;
+               }
+           }
+           System.out.println(lcm);
+           sc.close();
+
+        }
+
+    }
