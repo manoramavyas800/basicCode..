@@ -104,3 +104,30 @@ public class Socialnetwork {
 
     }
 }
+//MAX IN AN ARRAY.
+
+import java.util.Scanner;
+
+public class Socialnetwork {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        int[] arr = new int[t];
+         boolean flag = true;
+        for (int i = 0; i < t; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 1; i <t; i++) {
+            if (arr[i - 1] > arr[i]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
+        }
+
+    }
+}
