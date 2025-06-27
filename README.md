@@ -73,3 +73,34 @@ import java.util.Scanner;
         }
 
     }
+    //COUNT DISTINCT ELEMENTS
+
+    
+import java.util.Scanner;
+
+public class Socialnetwork {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        int[] arr = new int[t];
+        int count = 0;
+
+        for (int i = 0; i < t; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < t; i++) {
+            boolean flag = true;
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[i] == arr[j]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                count++;
+            }
+        }
+            System.out.println(count);
+
+    }
+}
