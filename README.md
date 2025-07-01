@@ -184,3 +184,28 @@ public  class TestClass {
       System.out.println(ans);
     }
 }
+//missmatuch charcaters
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+     static char function(String a, String b) {
+         char[] a1=a.toCharArray();
+         Arrays.sort(a1);
+         char[] a2=b.toCharArray();
+         Arrays.sort(a2);
+         for(int i=0;i<a1.length;i++){
+             if(a1[i]!=a2[i]){
+                 return a2[i];
+             }
+         }
+         return a2[a1.length];
+     }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+     String a = sc.nextLine();
+     String b = sc.nextLine();
+     System.out.println(function(a,b));
+}
+}
