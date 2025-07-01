@@ -164,4 +164,23 @@ public  class TestClass {
         System.out.println(isPanagram(a));
     }
 }
-//
+//Extracting Digits After the Decimal Point
+
+import java.util.Scanner;
+
+public  class TestClass {
+  static String digitChack(String n){
+      int position=n.indexOf('.');
+      if(position<0){
+          return " ";
+      }else{
+          return n.substring(position+1);
+      }
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       String a = sc.nextLine();
+      String ans= digitChack(a);
+      System.out.println(ans);
+    }
+}
