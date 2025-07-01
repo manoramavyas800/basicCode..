@@ -131,3 +131,37 @@ public class Socialnetwork {
 
     }
 }
+//Panagram Checking in Java
+
+import java.util.Scanner;
+
+public  class TestClass {
+   static boolean isPanagram(String a) {
+       int n = a.length();
+       if (n < 26) return false;
+       boolean[] valid = new boolean[26];
+       for (int i = 0; i < n; i++) {
+           char c = a.charAt(i);
+
+           if (c >= 'a' && c <= 'z') {
+               valid[c - 'a'] = true;
+           }
+           if (c >= 'A' && c <= 'Z') {
+               valid[c - 'A'] = true;
+           }
+       }
+       for (int i = 0; i < 26; i++) {
+           if (!valid[i]) return false;
+       }
+
+    return true;
+
+   }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       String a = sc.nextLine();
+        System.out.println(isPanagram(a));
+    }
+}
+//
