@@ -249,3 +249,33 @@ public class Recorsion {
 
     }
 }
+//Time Complexity: O(N*logN)
+//Auxiliary Space: O(1)
+
+//second mathods.
+
+import java.util.Scanner;
+
+public class Recorsion {
+    static boolean anagram(String a, String b) {
+        int p = 256;
+        if(a.length() != b.length()) return false;
+        char[] chars = new char[p];
+        for(int i = 0; i < a.length(); i++) {
+            chars[a.charAt(i)]++;
+            chars[b.charAt(i)]--;
+        }
+        for(int i = 0; i < p; i++) {
+            if(chars[i] != 0) return false;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+        System.out.println(anagram(a,b));
+    }
+}
+//Time Complexity: O(N)
+//Auxiliary Space: O(256)
