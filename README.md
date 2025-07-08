@@ -225,3 +225,27 @@ public class CodeforcesQus {
         System.out.println(n);
     }
 }
+//Check for Anagram(they are just permutations of each other).
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Recorsion {
+    static boolean anagram(String a, String b) {
+        if(a.length() != b.length()) return false;
+        char[] a1=a.toCharArray();
+        Arrays.sort(a1);
+        a=new String(a1);
+        char[] a2=b.toCharArray();
+        Arrays.sort(a2);
+        b=new String(a2);
+        return a.equals(b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+        System.out.println(anagram(a,b));
+
+    }
+}
