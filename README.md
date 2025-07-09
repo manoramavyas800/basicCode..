@@ -300,3 +300,23 @@ public class CodeforcesQus {
         System.out.println(s);
     }
 }
+//CONVERT BINARY TO DECIMAL.
+
+import java.util.Scanner;
+
+public class CodeforcesQus {
+    static void byTOdec(String str){
+        int k=1;
+        int m=0;
+        for(int i=str.length()-1;i>=0;i--){
+            m+=(str.charAt(i)-'0')*k;
+            k*=2;
+        }
+        System.out.println(m);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        byTOdec(str);
+    }
+}
