@@ -279,3 +279,24 @@ public class Recorsion {
 }
 //Time Complexity: O(N)
 //Auxiliary Space: O(256)
+
+//convert decimal number to binary number.
+
+import java.util.Scanner;
+
+public class CodeforcesQus {
+    public static String toBinary(int n) {
+        StringBuilder sb=new StringBuilder();
+        while(n>0){
+            sb.append(n%2);
+            n/=2;
+        }
+        return sb.reverse().toString();
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s = toBinary(n);
+        System.out.println(s);
+    }
+}
