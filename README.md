@@ -356,3 +356,37 @@ public class Main {
               }
             }
         }
+        //PRINT 1 TO N ARMSTRONG NUMBER
+
+        import java.util.Scanner;
+
+public class Main {
+    static int countDigits(int number) {
+        int count = 0;
+        while (number > 0) {
+            number = number / 10;
+            count++;
+        }
+        return count;
+    }
+    static int Armstrong(int number) {
+        int sum = 0;
+        int digits=countDigits(number);
+        while (number > 0) {
+            int digit = number % 10;
+            sum +=Math.pow(digit,digits) ;
+            number = number / 10;
+
+        }
+        return sum;
+    }
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                int n = sc.nextInt();
+                for (int i = 1; i < n; i++) {
+                    if (Armstrong(i) == i) {
+                        System.out.println(i);
+                    }
+                }
+            }
+        }
